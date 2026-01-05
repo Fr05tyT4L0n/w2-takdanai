@@ -44,6 +44,7 @@ class RectangleCalcState extends State<RectangleCalc> {
               "กว้าง, $_width เมตร, ยาว $_length เมตร, พื้นที่ $_area ตารางเมตร",
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
             ),
+
             SizedBox(height: 10),
 
             TextField(
@@ -64,6 +65,7 @@ class RectangleCalcState extends State<RectangleCalc> {
 
             SizedBox(
               width: double.infinity,
+
               child: ElevatedButton(
                 onPressed: () => _calcRectangle(),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),

@@ -20,7 +20,6 @@ class VolumeCalcState extends State<VolumeCalc> {
 
     setState(() {
       _gallon = _litter / _value;
-
       _gallonCtrl.text = _gallon.toStringAsFixed(2);
     });
   }
@@ -45,6 +44,7 @@ class VolumeCalcState extends State<VolumeCalc> {
               "ลิตร, $_litter ลิตร, แกลลอน ${_gallon.toStringAsFixed(2)} แกลลอน",
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
             ),
+
             SizedBox(height: 10),
 
             TextField(
@@ -66,6 +66,7 @@ class VolumeCalcState extends State<VolumeCalc> {
 
             SizedBox(
               width: double.infinity,
+
               child: ElevatedButton(
                 onPressed: () => _calcVolume(),
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
