@@ -41,7 +41,7 @@ class RectangleCalcState extends State<RectangleCalc> {
             SizedBox(height: 10),
 
             Text(
-              "กว้าง, $_width เมตร, ยาว $_length เมตร, พื้นที่ $_area ตารางเมตร",
+              "กว้าง $_width เมตร, ยาว $_length เมตร, พื้นที่ $_area ตารางเมตร",
               style: TextStyle(fontWeight: FontWeight.w500, fontSize: 16),
             ),
 
