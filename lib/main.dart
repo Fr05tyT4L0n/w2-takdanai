@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
       ),
       initialRoute: '/',
       routes: {
@@ -36,44 +36,89 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+        padding: EdgeInsets.all(30),
 
         child: Column(
-          // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: [
             SizedBox(height: 15),
-            Text("โปรแกรมคำนวณ", style: TextStyle(fontSize: 24)),
+
+            Text(
+              "โปรแกรมคำนวณ",
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            SizedBox(height: 5),
+
+            Text(
+              "กรุณาเลือกรายการที่ต้องการ",
+              style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
+            ),
+
+            SizedBox(height: 30),
+
+            SizedBox(
+              width: double.infinity,
+              height: 60,
+
+              child: TextButton(
+                onPressed: () => Navigator.pushNamed(context, '/RectangleCalc'),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue.shade600,
+                  foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+
+                  children: [
+                    Icon(Icons.square_foot),
+
+                    SizedBox(width: 12),
+
+                    Text(
+                      "คำนวณพื้นที่สี่เหลี่ยม",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
             SizedBox(height: 15),
 
             SizedBox(
               width: double.infinity,
+              height: 60,
 
               child: TextButton(
-                onPressed: () => {
-                  Navigator.pushNamed(context, '/RectangleCalc'),
-                },
+                onPressed: () => Navigator.pushNamed(context, '/VolumeCalc'),
                 style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue,
+                  backgroundColor: Colors.green.shade600,
                   foregroundColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                  ),
                 ),
-                child: Text("คำนวณพื้นที่สี่เหลี่ยม"),
-              ),
-            ),
-            
-            SizedBox(
-              width: double.infinity,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(Icons.water_drop),
 
-              child: TextButton(
-                onPressed: () => {
-                  Navigator.pushNamed(context, '/VolumeCalc'),
-                },
-                style: TextButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  foregroundColor: Colors.white,
+                    SizedBox(width: 15),
+
+                    Text(
+                      "แปลงลิตรเป็นแกลลอน",
+                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
+                    ),
+                  ],
                 ),
-                child: Text("แปลงลิตรเป็นแกลลอน"),
               ),
             ),
           ],
