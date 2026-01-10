@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
       ),
       initialRoute: '/',
       routes: {
@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
             SizedBox(height: 5),
 
             Text(
-              "กรุณาเลือกรายการที่ต้องการ",
+              "เลือกรายการที่ต้องการ",
               style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
             ),
 
@@ -80,7 +80,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Icon(Icons.square_foot),
 
-                    SizedBox(width: 12),
+                    SizedBox(width: 15),
 
                     Text(
                       "คำนวณพื้นที่สี่เหลี่ยม",

@@ -32,8 +32,8 @@ class RectangleCalcState extends State<RectangleCalc> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("พื้นที่สี่เหลี่ยม"), centerTitle: true),
-      body: SingleChildScrollView(
+      appBar: AppBar(title: Text("คำนวณพื้นที่สี่เหลี่ยม"), centerTitle: true),
+      body: Container(
         padding: EdgeInsets.all(15),
 
         child: Column(
@@ -44,16 +44,21 @@ class RectangleCalcState extends State<RectangleCalc> {
               decoration: BoxDecoration(
                 color: Colors.blue.shade100,
                 borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.blue.shade500)
               ),
               child: Column(
                 children: [
                   Text("พื้นที่ทั้งหมด", style: TextStyle(color: Colors.black)),
 
-                  Text("$_area", style: TextStyle(
-                    fontSize: 56,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.blue.shade900,
-                  ),
+                  SizedBox(height: 15),
+
+                  Text(
+                    "$_area",
+                    style: TextStyle(
+                      fontSize: 56,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.blue.shade900,
+                    ),
                   ),
 
                   Text("ตารางเมตร", style: TextStyle(color: Colors.black)),
