@@ -17,8 +17,19 @@ class MyApp extends StatelessWidget {
       title: 'Flutter',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blueGrey),
+        // colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.black,
+          foregroundColor: Colors.white,
+          centerTitle: true,
+        ),
+
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.white,
+        ),
       ),
+
       initialRoute: '/',
       routes: {
         '/': (context) => HomePage(),
@@ -42,21 +53,21 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
 
           children: [
-            SizedBox(height: 15),
+            SizedBox(height: 30),
 
             Text(
               "โปรแกรมคำนวณ",
               style: TextStyle(
-                fontSize: 32,
+                fontSize: 42,
                 fontWeight: FontWeight.bold,
               ),
             ),
 
-            SizedBox(height: 5),
+            SizedBox(height: 10),
 
             Text(
-              "เลือกรายการที่ต้องการ",
-              style: TextStyle(fontSize: 16, color: Colors.grey.shade700),
+              "กรุณาเลือกรายการที่ต้องการ",
+              style: TextStyle(fontSize: 18, color: Colors.grey.shade700),
             ),
 
             SizedBox(height: 30),
@@ -80,7 +91,7 @@ class HomePage extends StatelessWidget {
                   children: [
                     Icon(Icons.square_foot),
 
-                    SizedBox(width: 15),
+                    SizedBox(width: 12),
 
                     Text(
                       "คำนวณพื้นที่สี่เหลี่ยม",
@@ -114,11 +125,39 @@ class HomePage extends StatelessWidget {
                     SizedBox(width: 15),
 
                     Text(
-                      "แปลงลิตรเป็นแกลลอน",
+                      "แปลงลิตรเป็นแกลลอน (US)",
                       style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600),
                     ),
                   ],
                 ),
+              ),
+            ),
+
+            Spacer(),
+
+            Container(
+              width: double.infinity,
+              padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color: Colors.grey.shade200,
+                borderRadius: BorderRadius.circular(15),
+
+              ),
+              child: Row(
+                children: [
+                  Icon(Icons.calculate, size: 56, color: Colors.black),
+
+                  SizedBox(width: 15),
+
+                  SizedBox(
+                    child: Text(
+                      "แอพสำหรับคำนวณพื้นที่และแปลงหน่วยอย่างง่าย \nใช้งานสะดวก รวดเร็ว",
+                      style: TextStyle(
+                          fontSize: 16
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
